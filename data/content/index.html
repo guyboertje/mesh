@@ -1,0 +1,48 @@
+<!doctype html>
+<html ng-app="Mesh">
+  <head>
+    <title>Mesh in action</title>
+    <link rel="stylesheet" href="lib/angular-ui.css">
+    <link rel="stylesheet" href="lib/code-mirror/lib/codemirror.css">
+    <link rel="stylesheet" href="lib/code-mirror/theme/monoguy.css">
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+  <body>
+    <div class="edit-section" ng-controller="FileManagerController">
+      <div class="code-section">
+        <div class="row" ng-repeat="row in grid">
+          <div class="col" ng-repeat="col in row">
+            <div class="editr" ng-repeat="file in col">
+              <textarea ui-codemirror ng-model="file.content"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="shell-section" ng-controller="ShellController">
+      <ol class="history">
+        <li ng-repeat="old in history">
+          <div class="prompt">{{old.request}}</div>
+          <div class="line" ng-repeat="res in old.response">{{res}}</div>
+        </li>
+      </ol>
+      <div class="command">
+        <label class="input-prompt">{{cwd}}</label>
+        <input class="readline" ng-model="command" ng-enter="process_cmd()" placeholder="Enter a shell command">
+      </div>
+      <div>
+        <div class="prompt">{{current.request}}</div>
+        <div class="line" ng-click="open_file($event)" ng-repeat="res in current.response">{{res}}</div>
+      </div>
+    </div>
+    <script src="index.js" type="text/javascript" charset="utf-8"></script>
+    <script src="lib/angular.js" type="text/javascript" charset="utf-8"></script>
+    <script src="lib/angular-ui.js" type="text/javascript" charset="utf-8"></script>
+    <script src="lib/code-mirror/lib/codemirror.js" type="text/javascript" charset="utf-8"></script>
+    <script src="lib/code-mirror/addon/edit/matchbrackets.js" type="text/javascript" charset="utf-8"></script>
+    <script src="lib/code-mirror/mode/javascript/javascript.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="lib/mesh/mesh.js" type="text/javascript" charset="utf-8"></script>
+
+  </body>
+</html>

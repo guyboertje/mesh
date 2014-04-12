@@ -1,0 +1,36 @@
+/* Based on Sublime Text's Monokai theme */
+/* Modified by Guy */
+
+.cm-s-monoguy div.CodeMirror-selected {background: #49483E !important;}
+.cm-s-monoguy .CodeMirror-gutters {background: #272822; border-right: 0px;}
+.cm-s-monoguy .CodeMirror-linenumber {color: #d0d0d0;}
+.cm-s-monoguy .CodeMirror-cursor {border-left: 1px solid #f8f8f0 !important;}
+
+.cm-s-monoguy span.cm-comment {color: #505050;}
+.cm-s-monoguy span.cm-atom {color: #339999;}
+.cm-s-monoguy span.cm-number {color: #339999;}
+
+.cm-s-monoguy span.cm-property, .cm-s-monoguy span.cm-attribute {color: #AD9A37;}
+.cm-s-monoguy span.cm-keyword {color: #009FBF;}
+.cm-s-monoguy span.cm-string {color: #FAEFCD;}
+
+.cm-s-monoguy span.cm-variable {color: #AD9A37;}
+.cm-s-monoguy span.cm-variable-2 {color: #ab8850;}
+.cm-s-monoguy span.cm-def {color: #009FBF;}
+.cm-s-monoguy span.cm-error {background: #f92672; color: #f8f8f0;}
+.cm-s-monoguy span.cm-bracket {color: #CFB780;}
+.cm-s-monoguy span.cm-tag {color: #009FBF;}
+.cm-s-monoguy span.cm-link {color: #339999;}
+
+.cm-s-monoguy .CodeMirror-matchingbracket {
+  text-decoration: underline;
+  color: white !important;
+}
+
+.cm-s-monoguy.CodeMirror {
+  background: #000;
+  color: #80D0Ee;
+  font-family: 'Source Code Pro'
+  font-weight: 300;
+  -webkit-box-shadow: inset 0 0 10px black;
+}
